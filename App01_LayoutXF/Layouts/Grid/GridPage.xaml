@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App01_LayoutXF.Layouts.Grid.GridPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!-- DEFINI AS COLUNAS -->
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="Automatico" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <!-- DEFINI AS LINHAS -->
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <BoxView Grid.Row="0" Grid.Column="2" BackgroundColor="Blue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  BackgroundColor="Lime" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <BoxView Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

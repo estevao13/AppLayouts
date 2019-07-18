@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Layouts\" />
+    <Folder Include="Layouts\Stack\" />
+    <Folder Include="Layouts\Grid\" />
+    <Folder Include="Layouts\Absolute\" />
+    <Folder Include="Layouts\Relative\" />
+    <Folder Include="Layouts\Scroll\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Layouts\Grid\GridPage.xaml.cs">
+      <DependentUpon>GridPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Layouts\Scroll\ScrollPage.xaml.cs">
+      <DependentUpon>ScrollPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
